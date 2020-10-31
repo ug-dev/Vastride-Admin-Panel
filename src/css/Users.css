@@ -1,0 +1,205 @@
+body {
+  background-color: #eee;
+}
+
+.users {
+  width: 100%;
+  padding: 30px;
+  padding-top: 90px;
+}
+
+.users .users-content {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 2px 2px 10px #666;
+}
+
+.users-content .users-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.users-content .users-header p {
+  color: #222;
+  padding-left: 30px;
+  padding-top: 30px;
+  font-size: 24px;
+  letter-spacing: 1px;
+}
+
+.users-content .search-box {
+  display: flex;
+  border-radius: 3px;
+  margin-right: 30px;
+  margin-top: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+  justify-content: flex-start;
+  align-items: center;
+  height: 50px;
+  width: 300px;
+  border: 1px solid #c3c3c3;
+}
+
+.users-content .search-box img {
+  height: 15px;
+  width: 15px;
+  margin-right: 10px;
+}
+
+.users-content .search-box input {
+  border: none;
+  outline: none;
+  font-size: 16px;
+  height: 30px;
+  width: 100%;
+  padding-left: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  .users-content .users-header {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .users-content .users-header p {
+    padding-left: 0;
+  }
+
+  .users-content .users-header .search-box {
+    margin-right: 0;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .users-content .users-header {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .users-content .users-header .search-box {
+    width: 100%;
+  }
+}
+
+.users-content .users-table {
+  overflow-x: auto;
+  margin-top: 30px;
+}
+
+.users-table table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.users-table table th,
+td {
+  letter-spacing: 1px;
+  text-align: left;
+  padding: 20px;
+  vertical-align: middle;
+}
+
+.users-table table tr {
+  border-bottom: 1px solid #999;
+}
+
+.users-table table tr:hover {
+  background-color: #e3e3e3;
+}
+
+.users-table table tr .action-icons {
+  width: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.users-table table tr .action-icons img {
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
+}
+
+.users-table table tr .action-icons #cancel {
+  height: 16px;
+  width: 16px;
+}
+
+.users-content .row-option {
+  width: 100%;
+  height: 30px;
+  padding: 25px;
+  padding-right: 20px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.users-content .row-option select {
+  cursor: pointer;
+  width: 100px;
+  border: none;
+  outline: none;
+  background-color: #fff;
+}
+
+.users-content .row-option .navigation {
+  height: 100%;
+  width: fit-content;
+  padding-left: 20px;
+  padding-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.users-content .row-option .navigation img {
+  cursor: pointer;
+  height: 16px;
+  width: 16px;
+  margin-left: 15px;
+}
+
+.users-content .row-option .navigation img:nth-child(1) {
+  opacity: 0.5;
+}
+
+.users-content .row-option .navigation img:nth-child(2) {
+  opacity: 0.5;
+}
+
+.users-content .row-option .navigation p {
+  margin-left: 25px;
+  margin-right: 15px;
+}
+
+@media only screen and (max-width: 600px) {
+  .users-content .row-option {
+    width: 100%;
+    height: fit-content;
+    flex-direction: column;
+  }
+
+  .users-table table tr .action-icons img {
+    cursor: none;
+  }
+
+  .users-content .row-option select {
+    cursor: none;
+    margin-bottom: 10px;
+  }
+
+  .users-content .row-option .navigation {
+    width: 100%;
+    padding-left: 0;
+    margin-top: 15px;
+  }
+
+  .users-content .row-option .navigation img {
+    cursor: none;
+  }
+}

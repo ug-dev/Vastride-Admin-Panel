@@ -1,0 +1,276 @@
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input,
+select {
+  vertical-align: middle;
+}
+
+/* My Code */
+
+@font-face {
+  src: url(./fonts/Prompt-Medium.ttf);
+  font-family: Prompt-Medium;
+}
+
+* {
+  font-family: Prompt-Medium;
+  box-sizing: border-box;
+}
+
+.App {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.side-panel {
+  background-color: #fff;
+  position: fixed;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border-right: 1px solid rgba(0, 0, 0, 0.12);
+  height: 100vh;
+  width: 250px;
+}
+
+.side-panel .top-banner {
+  background-color: #33abda;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 180px;
+  width: 100%;
+}
+
+.side-panel .top-banner #logo {
+  cursor: pointer;
+  height: 100px;
+  width: 160px;
+}
+
+.side-panel .top-banner #close {
+  display: none;
+}
+
+.side-panel .bottom-banner {
+  height: calc(100vh - 180px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 10px;
+}
+
+.side-panel .bottom-banner ul {
+  width: 249px;
+  list-style: none;
+}
+
+.side-panel .bottom-banner ul li {
+  cursor: pointer;
+  height: 60px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 30px;
+}
+
+.side-panel .bottom-banner ul li:hover {
+  background-color: #e3e3e3;
+}
+
+.side-panel .bottom-banner ul li img {
+  height: 20px;
+  width: 20px;
+  margin-right: 40px;
+}
+
+.side-panel .bottom-banner ul li p {
+  font-size: 16px;
+  color: #111;
+}
+
+.App .main-content {
+  margin-left: 250px;
+  width: calc(100% - 250px);
+  background-color: #f2f2f2;
+}
+
+@media only screen and (max-width: 700px) {
+  .side-panel-mask {
+    display: none;
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: #222;
+    opacity: 0.6;
+  }
+
+  .side-panel-mask.visible {
+    display: block;
+  }
+}
